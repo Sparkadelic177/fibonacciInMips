@@ -5,12 +5,8 @@
         input: .word 0
 .text		
 
-	#giving the instruction to syscall to print something
            addi $v0,$zero,4 
-        #loading the address of the prompt to a registar 
-        #this is going to be sent to the syscall 
            la $a0,promptR
-        #this prints the prompt for the user to read and saved in $v0
            syscall
            addi $v0,$zero,5
            syscall
